@@ -30,7 +30,7 @@ export default function Home() {
   }, []);
 
   // Function to handle smooth scrolling
-  const handleSmoothScroll = (e, targetId) => {
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
     e.preventDefault();
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
@@ -382,8 +382,13 @@ export default function Home() {
   );
 }
 
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  image: string;
+}
 // Service Card Component with Hover Effect
-function ServiceCard({ title, description, image }) {
+function ServiceCard({ title, description, image }: ServiceCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   
   return (
@@ -394,7 +399,7 @@ function ServiceCard({ title, description, image }) {
     >
       <div className="relative">
         {/* Image at the top */}
-        <Image 
+        <Image
           src={image} 
           alt={title}
           className="w-full h-64 object-cover"
