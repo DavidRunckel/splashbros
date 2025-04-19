@@ -154,8 +154,8 @@ export default function Home() {
                 in delivering top-quality service with a personal touch.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                Say goodbye to stubborn dirt, grime, and mold that tarnish your property's curb appeal. Whether it's your
-                siding, driveway, deck, patio, or roof, we've got you covered.
+                Say goodbye to stubborn dirt, grime, and mold that tarnish your property`s curb appeal. Whether it`s your
+                siding, driveway, deck, patio, or roof, we`ve got you covered.
               </p>
               <a href="#form" onClick={(e) => handleSmoothScroll(e, '#form')} className="px-8 py-3 bg-yellow-500 text-sky-900 rounded-full font-semibold text-lg hover:bg-blue-200 transition-colors inline-block">
                 Contact Us Today
@@ -394,7 +394,7 @@ function ServiceCard({ title, description, image }) {
     >
       <div className="relative">
         {/* Image at the top */}
-        <img 
+        <Image 
           src={image} 
           alt={title}
           className="w-full h-64 object-cover"
